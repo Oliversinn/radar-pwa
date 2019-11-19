@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />  
+    <link rel="apple-touch-icon" href="images/icon-152.png">   
+    <meta name="theme-color" content="white"/>  
+    <meta name="apple-mobile-web-app-capable" content="yes">  
+    <meta name="apple-mobile-web-app-status-bar-style" content="white"> 
+    <meta name="apple-mobile-web-app-title" content="Hello World"> 
+    <meta name="msapplication-TileImage" content="images/icon-144.png">  
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+
+    <link rel="manifest" href="/manifest.json">
+  
+  
+  
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Config Webpack para React</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <noscript>
+        <div className='radar'>
+            <div className='sweep'></div>
+        </div>
+    </noscript>
+    <script src="./bundle.js"></script>
+    <script>
+      if('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('/sw.js')
+          .then(function() {
+                  console.log('Service Worker Registered');
+          });
+      }
+    </script>
+    <script src="js/main.js"></script>
+
+  </body>
+</html>
